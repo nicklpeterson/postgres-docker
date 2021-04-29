@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
     db:
-        image: postgres:10.10
+        image: postgres:12.2
         ports:
             - "5400:5432"
         restart: always
@@ -10,6 +10,8 @@ services:
             POSTGRES_DB: DBplay
             POSTGRES_USER: dev
             POSTGRES_PASSWORD: 123
+        volumes:
+            - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     admin:
         image: adminer
         restart: always
