@@ -17,6 +17,6 @@ On start up the init.sql script will be executed. Right now this creates an empt
 
 ```yml
 volumes:
-	- ./v1_schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
-	- ./v2_schema.sql:/docker-entrypoint-initdb.d/2-schema.sql
+   - ./v1_schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+   - ./v2_schema.sql:/docker-entrypoint-initdb.d/2-schema.sql
 ```
